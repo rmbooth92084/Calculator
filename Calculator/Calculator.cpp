@@ -11,11 +11,29 @@ void solve(char op, double firstNum, double secondNum) {
     Op* first = new Op(firstNum);
     Op* second = new Op(secondNum);
 
+    Base* result;
     switch (op){
-        case '*' :
-
+        case '+':
+            result = new Add(first,second);
             break;
+        case '-':
+            result = new Sub(first, second);
+            break;
+        case '*':
+            result = new Mult(first, second);
+            break;
+        case '/':
+            result = new Div(first, second);
+            break;
+        case '^':
+            result = new Pow(first, second);
+            break;
+        default:
+            cout << "should not have gotten here" << endl;
+            result = new Op();
+             break;
     }
+    cout << result->stringify() << " = " << result->evaluate();
 }
 
 void numberInputMenu(char operation) {
@@ -35,7 +53,7 @@ void numberInputMenu(char operation) {
 void operationMenu() {
     
     cout << "please input what opperation of what you want to do:" << endl
-        << "(*, ^)" << endl;
+        << "(+,-,*,/, ^)" << endl;
     char input;
     while(1){
         input = ' '; //default input
@@ -44,7 +62,10 @@ void operationMenu() {
         bool valid = false;
         //This switch statment plus the fallowing if statemnet  checks if the input was valid
         switch (input) {
+            case '+':
+            case '-':
             case '*':
+            case '/':
             case '^':
                 valid = true;
                 break;
