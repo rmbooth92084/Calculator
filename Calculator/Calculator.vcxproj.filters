@@ -35,5 +35,14 @@
     <ClInclude Include="mult.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="add.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sub.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="div.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

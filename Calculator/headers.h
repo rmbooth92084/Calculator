@@ -8,5 +8,8 @@
 #include "base.h"
 #include "pow.h"
 #include "mult.h"
+#include "add.h"
+#include "sub.h"
+#include "div.h"
 
 #endif //headers

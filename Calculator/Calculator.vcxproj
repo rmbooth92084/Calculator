@@ -142,6 +142,9 @@
     <ClCompile Include="Calculator.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="add.h" />
+    <ClInclude Include="div.h" />
+    <ClInclude Include="sub.h" />
     <ClInclude Include="mult.h" />
     <ClInclude Include="pow.h" />
     <ClInclude Include="headers.h" />
