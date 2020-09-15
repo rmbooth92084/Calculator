@@ -5,7 +5,10 @@
 #include "headers.h"
 
 using namespace std;
-
+/*
+* This function puts all the information the user inputed to solve and display
+* the problem
+*/
 void solve(char op, double firstNum, double secondNum) {
     
     Op* first = new Op(firstNum);
@@ -35,7 +38,10 @@ void solve(char op, double firstNum, double secondNum) {
     }
     cout << result->stringify() << " = " << result->evaluate();
 }
-
+/*
+* This prompts the user to input the 2 numbers to but used to make the problem
+* but this currently doesn't take care of if the user inputs an invalid 
+*/
 void numberInputMenu(char operation) {
     
     double firstInput, secondInput;
@@ -49,7 +55,11 @@ void numberInputMenu(char operation) {
     solve(operation, firstInput, secondInput);
 
 }
-
+/*
+* This funciton promps the user to input the operation they want to use
+* and varifies that it's a valid input and then calls numberInputMenu
+* to deal with the user input numbers
+*/
 void operationMenu() {
     
     cout << "please input what opperation of what you want to do:" << endl
