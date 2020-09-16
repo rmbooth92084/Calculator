@@ -3,7 +3,6 @@
 
 /*This operations does multiplication*/
 
-//#include "base.h"
 #include "op.h"
 class Mult : public Base {
 public:

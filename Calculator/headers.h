@@ -12,5 +12,15 @@
 #include "sub.h"
 #include "div.h"
 #include "factorial.h"
+#include "squ_root.h"
+#include "var_root.h"
+#include "e.h"
+#include "mod.h"
+
+#include "trunc.h"
+#include "paren.h"
+#include "abs.h"
+
+#include <iostream>
 
 #endif //headers

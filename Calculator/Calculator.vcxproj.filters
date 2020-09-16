@@ -47,5 +47,29 @@
     <ClInclude Include="factorial.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="squ_root.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="var_root.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="e.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mod.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="decorator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="trunc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="abs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="paren.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

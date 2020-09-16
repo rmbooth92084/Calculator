@@ -1,7 +1,6 @@
 #ifndef __FACTORIAL_H__
 #define __FACTORIAL_H__
 
-//#include "base.h"
 #include "op.h"
 class Factorial : public Base {
 private:

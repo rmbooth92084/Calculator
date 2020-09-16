@@ -142,9 +142,17 @@
     <ClCompile Include="Calculator.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="abs.h" />
     <ClInclude Include="add.h" />
+    <ClInclude Include="decorator.h" />
     <ClInclude Include="div.h" />
+    <ClInclude Include="e.h" />
     <ClInclude Include="factorial.h" />
+    <ClInclude Include="mod.h" />
+    <ClInclude Include="paren.h" />
+    <ClInclude Include="trunc.h" />
+    <ClInclude Include="var_root.h" />
+    <ClInclude Include="squ_root.h" />
     <ClInclude Include="sub.h" />
     <ClInclude Include="mult.h" />
     <ClInclude Include="pow.h" />
