@@ -1,5 +1,5 @@
-#ifndef _HEADERS_
-#define _HEADERS_
+#ifndef _HEADERS_H_
+#define _HEADERS_H_
 /*
 * The purpose of this file is to have all the files for the operation 
 * all in one place to reduce the amount of retyping
@@ -11,5 +11,6 @@
 #include "add.h"
 #include "sub.h"
 #include "div.h"
+#include "factorial.h"
 
 #endif //headers

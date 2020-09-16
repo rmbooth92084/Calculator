@@ -1,9 +1,9 @@
-#ifndef __MULT_HPP__
-#define __MULT_HPP__
+#ifndef __MULT_H__
+#define __MULT_H__
 
 /*This operations does multiplication*/
 
-#include "base.h"
+//#include "base.h"
 #include "op.h"
 class Mult : public Base {
 public:

@@ -1,5 +1,5 @@
-#ifndef __BASE_HPP__
-#define __BASE_HPP__
+#ifndef __BASE_H__
+#define __BASE_H__
 /*
 * This is the parent class of all the opperations
 */

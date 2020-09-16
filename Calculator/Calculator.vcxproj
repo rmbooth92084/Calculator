@@ -144,6 +144,7 @@
   <ItemGroup>
     <ClInclude Include="add.h" />
     <ClInclude Include="div.h" />
+    <ClInclude Include="factorial.h" />
     <ClInclude Include="sub.h" />
     <ClInclude Include="mult.h" />
     <ClInclude Include="pow.h" />

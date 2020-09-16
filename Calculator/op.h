@@ -1,5 +1,5 @@
-#ifndef __OP_HPP__
-#define __OP_HPP__
+#ifndef __OP_H__
+#define __OP_H__
 /*These are the numbers that are used in the operations*/
 #include "base.h"
 

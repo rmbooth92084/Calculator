@@ -144,3 +144,39 @@ TEST(DivTest3, DivEvaluateNonZeroString) {
     EXPECT_EQ(test->stringify(), first->stringify() + " / " + second->stringify());
 }
 //////////////////////////////////////////////////////
+/*
+* Factorial tests
+*/
+TEST(FactorialTest1, testIntergersWithString){
+    Op* four = new Op(4);
+
+    Factorial* test = new Factorial(four);
+    EXPECT_EQ(test->evaluate(), 24);
+    EXPECT_EQ(test->stringify(), "!4.000000");
+}
+TEST(FactorialTest2, testDoubleWithString)
+{
+    Op* four = new Op(4.4);
+
+    Factorial* test = new Factorial(four);
+    EXPECT_EQ(test->evaluate(), 24);
+    EXPECT_EQ(test->stringify(), "!4.400000");
+}
+TEST(FactorialTest3, testNegativeWithString){
+    Op* nSeven = new Op(-7);
+
+    Factorial* test = new Factorial(nSeven);
+    EXPECT_EQ(test->evaluate(), 1);
+    EXPECT_EQ(test->stringify(), "1");
+
+}
+TEST(FactorialTest4, testComboTest){
+    Op* two = new Op(2);
+    Op* four = new Op(4);
+
+    Mult* mult = new Mult(two, four);
+    Factorial* test = new Factorial(mult);
+    EXPECT_EQ(test->evaluate(), 40320);
+    EXPECT_EQ(test->stringify(), "!" + mult->stringify());
+}
+//////////////////////////////////////////////////////

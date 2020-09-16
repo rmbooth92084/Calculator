@@ -3,7 +3,7 @@
 /*
 * This operation deals with exponents
 */
-#include "base.h"
+//#include "base.h"
 #include "op.h"
 class Pow : public Base {
 public:
