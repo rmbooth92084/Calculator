@@ -511,5 +511,30 @@ TEST(SinTest3, Combo) {
 }
 //////////////////////////////////////////////////////
 /*
-* Paren/Trunc comb tests
+* tan tests
 */
+TEST(TanTest1, OneOpPIDivFour) {
+    Op* pi = new Op(PI/4);
+    Tan* test = new Tan(pi);
+
+    EXPECT_EQ(test->evaluate(), tan(PI/4));
+    EXPECT_EQ(test->stringify(), "tan(" + pi->stringify() + ")");
+}
+TEST(TanTest2, OneOpPIOvertwo) {
+    Op* pi = new Op(PI / 2);
+    Tan* test = new Tan(pi);
+
+    EXPECT_EQ(test->evaluate(), tan(PI / 2));
+    EXPECT_EQ(test->stringify(), "tan(" + pi->stringify() + ")");
+}
+
+TEST(TanTest3, Combo) {
+    Op* pi = new Op(PI);
+    Op* onePointFive = new Op(1.5);
+    Mult* add = new Mult(pi, onePointFive);
+
+    Tan* test = new Tan(add);
+
+    EXPECT_EQ(test->evaluate(), tan(PI * 1.5));
+    EXPECT_EQ(test->stringify(), "tan(" + add->stringify() + ")");
+}

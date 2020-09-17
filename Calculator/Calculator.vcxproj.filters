@@ -80,5 +80,8 @@
     <ClInclude Include="sin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="tan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -152,6 +152,7 @@
     <ClInclude Include="mod.h" />
     <ClInclude Include="paren.h" />
     <ClInclude Include="sin.h" />
+    <ClInclude Include="tan.h" />
     <ClInclude Include="trunc.h" />
     <ClInclude Include="twoPow.h" />
     <ClInclude Include="var_root.h" />

@@ -19,6 +19,7 @@
 #include "twoPow.h"
 #include "cos.h"
 #include "sin.h"
+#include "tan.h"
 
 #include "trunc.h"
 #include "paren.h"
