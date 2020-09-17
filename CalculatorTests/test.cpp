@@ -482,8 +482,33 @@ TEST(CosTest3, Combo) {
 }
 //////////////////////////////////////////////////////
 /*
-* Paren/Trunc comb tests
+* Sin tests
 */
+TEST(SinTest1, OneOpPI) {
+    Op* pi = new Op(PI);
+    Sin* test = new Sin(pi);
+
+    EXPECT_EQ(test->evaluate(), sin(PI));
+    EXPECT_EQ(test->stringify(), "sin(" + pi->stringify() + ")");
+}
+TEST(SinTest2, OneOpPIOvertwo) {
+    Op* pi = new Op(PI/2);
+    Sin* test = new Sin(pi);
+
+    EXPECT_EQ(test->evaluate(), 1);
+    EXPECT_EQ(test->stringify(), "sin(" + pi->stringify() + ")");
+}
+
+TEST(SinTest3, Combo) {
+    Op* pi = new Op(PI);
+    Op* onePointFive = new Op(1.5);
+    Mult* add = new Mult(pi, onePointFive);
+
+    Sin* test = new Sin(add);
+
+    EXPECT_EQ(test->evaluate(), -1);
+    EXPECT_EQ(test->stringify(), "sin(" + add->stringify() + ")");
+}
 //////////////////////////////////////////////////////
 /*
 * Paren/Trunc comb tests

@@ -18,6 +18,7 @@
 #include "mod.h"
 #include "twoPow.h"
 #include "cos.h"
+#include "sin.h"
 
 #include "trunc.h"
 #include "paren.h"
