@@ -71,5 +71,8 @@
     <ClInclude Include="paren.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="twoPow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -416,3 +416,46 @@ TEST(ParenTruncComboTest2, FourOperationsTruncInParen) {
 
     EXPECT_EQ(addTwo->stringify(), "2.000000 + (15.000000 + 3.000000)");
 }
+//////////////////////////////////////////////////////
+/*
+* TwoPow tests
+*/
+TEST(TwoPowTest1, OneOp) {
+    Op* eight = new Op(8);
+    TwoPow* test = new TwoPow(eight);
+
+    EXPECT_EQ(test->evaluate(), 256);
+}
+TEST(TwoPowTest2, OneNegativeOp) {
+    Op* three = new Op(-3);
+    TwoPow* test = new TwoPow(three);
+
+    EXPECT_EQ(test->evaluate(), 0.125);
+}
+TEST(TwoPowTest3, Zero) {
+    Op* zero = new Op(0);
+    TwoPow* test = new TwoPow(zero);
+
+    EXPECT_EQ(test->evaluate(), 1);
+}
+TEST(TwoPowTest4, Combo) {
+    Op* three = new Op(3);
+    Op* four = new Op(4);
+    Add* add = new Add(three, four);
+
+    TwoPow* test = new TwoPow(add);
+
+    EXPECT_EQ(test->evaluate(), 128);
+}
+//////////////////////////////////////////////////////
+/*
+* Paren/Trunc comb tests
+*/
+//////////////////////////////////////////////////////
+/*
+* Paren/Trunc comb tests
+*/
+//////////////////////////////////////////////////////
+/*
+* Paren/Trunc comb tests
+*/

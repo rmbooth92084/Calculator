@@ -20,4 +20,4 @@ public:
     }
 };
 
-#endif //__MULT_HPP__
+#endif //__MULT_H__

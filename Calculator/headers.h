@@ -16,6 +16,7 @@
 #include "var_root.h"
 #include "e.h"
 #include "mod.h"
+#include "twoPow.h"
 
 #include "trunc.h"
 #include "paren.h"
