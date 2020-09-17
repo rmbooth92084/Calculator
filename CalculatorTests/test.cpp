@@ -425,18 +425,21 @@ TEST(TwoPowTest1, OneOp) {
     TwoPow* test = new TwoPow(eight);
 
     EXPECT_EQ(test->evaluate(), 256);
+    EXPECT_EQ(test->stringify(), "2 ^ (" + eight->stringify() + ")");
 }
 TEST(TwoPowTest2, OneNegativeOp) {
     Op* three = new Op(-3);
     TwoPow* test = new TwoPow(three);
 
     EXPECT_EQ(test->evaluate(), 0.125);
+    EXPECT_EQ(test->stringify(), "2 ^ (" + three->stringify() + ")");
 }
 TEST(TwoPowTest3, Zero) {
     Op* zero = new Op(0);
     TwoPow* test = new TwoPow(zero);
 
     EXPECT_EQ(test->evaluate(), 1);
+    EXPECT_EQ(test->stringify(), "2 ^ (" + zero->stringify() + ")");
 }
 TEST(TwoPowTest4, Combo) {
     Op* three = new Op(3);
@@ -446,11 +449,37 @@ TEST(TwoPowTest4, Combo) {
     TwoPow* test = new TwoPow(add);
 
     EXPECT_EQ(test->evaluate(), 128);
+    EXPECT_EQ(test->stringify(), "2 ^ (" + add->stringify() + ")");
 }
+
 //////////////////////////////////////////////////////
 /*
-* Paren/Trunc comb tests
+* Cos tests
 */
+TEST(CosTest1, OneOpPI) {
+    Op* pi = new Op(PI);
+    Cos* test = new Cos(pi);
+
+    EXPECT_EQ(test->evaluate(), -1);
+    EXPECT_EQ(test->stringify(), "cos(" + pi->stringify() + ")");
+}
+TEST(CosTest2, Zero) {
+    Op* zero = new Op();
+    Cos* test = new Cos(zero);
+
+    EXPECT_EQ(test->evaluate(), 1);
+    EXPECT_EQ(test->stringify(), "cos(" + zero->stringify() + ")");
+}
+
+TEST(CosTest3, Combo) {
+    Op* pi = new Op(PI);;
+    Add* add = new Add(pi, pi);
+
+    Cos* test = new Cos(add);
+
+    EXPECT_EQ(test->evaluate(), 1);
+    EXPECT_EQ(test->stringify(), "cos(" + add->stringify() + ")");
+}
 //////////////////////////////////////////////////////
 /*
 * Paren/Trunc comb tests

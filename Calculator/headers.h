@@ -17,10 +17,13 @@
 #include "e.h"
 #include "mod.h"
 #include "twoPow.h"
+#include "cos.h"
 
 #include "trunc.h"
 #include "paren.h"
 #include "abs.h"
+
+#define PI 3.14159265
 
 #include <iostream>
 

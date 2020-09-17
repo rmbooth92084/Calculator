@@ -144,6 +144,7 @@
   <ItemGroup>
     <ClInclude Include="abs.h" />
     <ClInclude Include="add.h" />
+    <ClInclude Include="cos.h" />
     <ClInclude Include="decorator.h" />
     <ClInclude Include="div.h" />
     <ClInclude Include="e.h" />

@@ -74,5 +74,8 @@
     <ClInclude Include="twoPow.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="cos.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
