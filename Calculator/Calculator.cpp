@@ -3,16 +3,16 @@
 
 #include <iostream>
 #include "headers.h"
+#include <vector>
 
 using namespace std;
+void numberInputMenu(Base*);
 /*
 * This function puts all the information the user inputed to solve and display
 * the problem
 */
-void solve(char op, double firstNum, double secondNum) {
+void solve(char op, Base* first, Base* second) {
     
-    Op* first = new Op(firstNum);
-    Op* second = new Op(secondNum);
 
     Base* result;
     switch (op){
@@ -36,23 +36,15 @@ void solve(char op, double firstNum, double secondNum) {
             result = new Op();
              break;
     }
-    cout << result->stringify() << " = " << result->evaluate();
-}
-/*
-* This prompts the user to input the 2 numbers to but used to make the problem
-* but this currently doesn't take care of if the user inputs an invalid 
-*/
-void numberInputMenu(char operation) {
-    
-    double firstInput, secondInput;
-
-    cout << "Now please enter the first number" << endl;
-    cin >> firstInput;
-
-    cout << "Now please enter the second number" << endl;
-    cin >> secondInput;
-
-    solve(operation, firstInput, secondInput);
+    cout << result->stringify() << " = " << result->evaluate() << endl
+        << "If you want to add to the problem input y" << endl;
+    char input;
+    cin >> input;
+    if (input == 'y' || input == 'Y') {
+        numberInputMenu(result);
+    }
+    else
+        exit(0);
 
 }
 /*
@@ -60,9 +52,9 @@ void numberInputMenu(char operation) {
 * and varifies that it's a valid input and then calls numberInputMenu
 * to deal with the user input numbers
 */
-void operationMenu() {
+void operationMenu(Base* first, Base* second) {
     
-    cout << "please input what opperation of what you want to do:" << endl
+    cout << "Please input what opperation of what you want to do:" << endl
         << "(+,-,*,/, ^)" << endl;
     char input;
     while(1){
@@ -86,11 +78,43 @@ void operationMenu() {
         if (valid)
             break;
     }
-    numberInputMenu(input);
+
+    solve(input,first,second);
     
 }
+/*
+* This fucntion is like the other one named similarly but takes in
+* a Base object so you can make a problem as long as you want
+*/
+void numberInputMenu(Base* firstPart) {
 
+    double  secondInput;
+
+    cout << "Please input the next number" << endl;
+    cin >> secondInput;
+    Op* secondNum = new Op(secondInput);
+
+    operationMenu(firstPart, secondNum);
+}
+/*
+* This prompts the user to input the 2 numbers to but used to make the problem
+* but this currently doesn't take care of if the user inputs an invalid
+*/
+void numberInputMenu() {
+
+    double firstInput, secondInput;
+
+    cout << "Please enter the first number" << endl;
+    cin >> firstInput;
+    Op* firstNum = new Op(firstInput);
+
+    cout << "Now please enter the second number" << endl;
+    cin >> secondInput;
+    Op* secondNum = new Op(secondInput);
+
+    operationMenu(firstNum, secondNum);
+}
 int main(){
-    operationMenu();
+    numberInputMenu();
 }
 
