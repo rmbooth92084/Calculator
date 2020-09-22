@@ -28,6 +28,7 @@
 #include "abs.h"
 
 //Sorting algorithims
+#include "sorting.h"
 #include "bubbleSort.h"
 #include "mergeSort.h"
 #include "quickSort.h"

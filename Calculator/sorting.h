@@ -6,6 +6,11 @@
 #include <stdio.h>
 #include <vector>
 
+#include "bubbleSort.h"
+#include "selectionSort.h"
+#include "mergeSort.h"
+#include "quickSort.h"
+
 using namespace std;
 //global variable
 vector<int> list;

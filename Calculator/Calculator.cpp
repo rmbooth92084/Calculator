@@ -114,7 +114,29 @@ void numberInputMenu() {
 
     operationMenu(firstNum, secondNum);
 }
+void sortingUI() {
+    getUserListInput();
+    selectSort();
+    cout << "Sorted List: " << endl;
+    for (int i = 0; i < list.size(); i++)
+    {
+        cout << list.at(i) << " ";
+    }
+    cout << endl;
+}
 int main(){
-    numberInputMenu();
+   // numberInputMenu();
+
+    cout << "Please input 1 for calculator and 2 for sorting a list" << endl;
+
+    char input;
+    cin >> input;
+
+    if (input == '1')
+        numberInputMenu();
+    else
+        sortingUI;
+    
+    return 0;
 }
 
