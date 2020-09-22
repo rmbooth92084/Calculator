@@ -4,6 +4,7 @@
 * The purpose of this file is to have all the files for the operation 
 * all in one place to reduce the amount of retyping
 */
+//Composite pattern
 #include "op.h"
 #include "base.h"
 #include "pow.h"
@@ -21,12 +22,20 @@
 #include "sin.h"
 #include "tan.h"
 
+//Decorator pattern
 #include "trunc.h"
 #include "paren.h"
 #include "abs.h"
 
+//Sorting algorithims
+#include "bubbleSort.h"
+#include "mergeSort.h"
+#include "quickSort.h"
+#include "selectionSort.h"
+
 #define PI 3.14159265
 
 #include <iostream>
+#include <vector>
 
 #endif //headers

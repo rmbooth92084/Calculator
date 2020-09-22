@@ -538,3 +538,273 @@ TEST(TanTest3, Combo) {
     EXPECT_EQ(test->evaluate(), tan(PI * 1.5));
     EXPECT_EQ(test->stringify(), "tan(" + add->stringify() + ")");
 }
+//////////////////////////////////////////////////////
+/*
+* Bubble sort tests
+*/
+//This test makes sure that it can sort a basic list
+TEST(BubbleSortTest1, SortingBasicList){
+    std::vector<int> test = { 9,8,7,6,5,4,3,2,1,0 };
+    int sorted[] = { 0,1,2,3,4,5,6,7,8,9 };
+
+    for (int i = 0; i < test.size(); i++)
+    {
+        EXPECT_EQ(BubbleSort(test).at(i), sorted[i]);
+    }
+
+}
+
+TEST(BubbleSortTest2, SortingBasicListWithNegatives){
+    std::vector<int> test = { 9,-8,7,6,-5,4,-3,2,-1,0 };
+    int sorted[] = { -8,-5,-3,-1,0,2,4,6,7,9 };
+
+    for (int i = 0; i < test.size(); i++)
+    {
+        EXPECT_EQ(BubbleSort(test).at(i), sorted[i]);
+    }
+
+}
+
+TEST(BubbleSortTest3, SortingBasicListWithMultiDigitNums){
+    std::vector<int> test = { 90,8,700,6,5,40,3,26,12,0 };
+    int sorted[] = { 0,3,5,6,8,12,26,40,90,700 };
+
+    for (int i = 0; i < test.size(); i++)
+    {
+        EXPECT_EQ(BubbleSort(test).at(i), sorted[i]);
+    }
+
+}
+
+TEST(BubbleSortTest4, AlreadySortedList){
+    std::vector<int> test = { 1,2,3,4,5 };
+    int sorted[] = { 1,2,3,4,5 };
+
+    for (int i = 0; i < test.size(); i++)
+    {
+        EXPECT_EQ(BubbleSort(test).at(i), sorted[i]);
+    }
+
+}
+
+TEST(BubbleSortTest5, OneNumberLongList){
+    std::vector<int> test = { 0 };
+    int sorted[] = { 0 };
+
+    for (int i = 0; i < test.size(); i++)
+    {
+        EXPECT_EQ(BubbleSort(test).at(i), sorted[i]);
+    }
+
+}
+
+TEST(BubbleSortTest6, EmptyList){
+    std::vector<int> test = {};
+
+    EXPECT_EQ(BubbleSort(test), test);
+
+
+}
+//////////////////////////////////////////////////////
+/*
+* Merge sort tests
+*/
+TEST(MergeSortTest1, SortingBasicList){
+    std::vector<int> vec = { 9,8,7,6,5,4,3,2,1,0 };
+    int sorted[] = { 0,1,2,3,4,5,6,7,8,9 };
+
+    std::vector<int> test = MergeSort(vec);
+    for (int i = 0; i < test.size(); i++)
+    {
+        EXPECT_EQ(test.at(i), sorted[i]);
+    }
+
+}
+TEST(MergeSortTest2, SortingBasicListWithNegatives){
+    std::vector<int> vec = { 9,-8,7,6,-5,4,-3,2,-1,0 };
+    int sorted[] = { -8,-5,-3,-1,0,2,4,6,7,9 };
+
+    std::vector<int> test = MergeSort(vec);
+    for (int i = 0; i < test.size(); i++)
+    {
+        std::cout << test.at(i) << std::endl;
+    }
+    for (int i = 0; i < test.size(); i++)
+    {
+        EXPECT_EQ(test.at(i), sorted[i]);
+    }
+
+}
+
+TEST(MergeSortTest3, SortingBasicListWithMultiDigitNums){
+    std::vector<int> test = { 90,8,700,6,5,40,3,26,12,0 };
+    int sorted[] = { 0,3,5,6,8,12,26,40,90,700 };
+
+    for (int i = 0; i < test.size(); i++)
+    {
+        EXPECT_EQ(MergeSort(test).at(i), sorted[i]);
+    }
+
+}
+
+TEST(MergeSortTest4, AlreadySortedList){
+    std::vector<int> test = { 1,2,3,4,5 };
+    int sorted[] = { 1,2,3,4,5 };
+
+    for (int i = 0; i < test.size(); i++)
+    {
+        EXPECT_EQ(MergeSort(test).at(i), sorted[i]);
+    }
+
+}
+
+TEST(MergeSortTest5, OneNumberLongList){
+    std::vector<int> test = { 0 };
+    int sorted[] = { 0 };
+
+    for (int i = 0; i < test.size(); i++)
+    {
+        EXPECT_EQ(MergeSort(test).at(i), sorted[i]);
+    }
+
+}
+
+TEST(MergeSortTest6, EmptyList){
+    std::vector<int> test = {};
+
+    EXPECT_EQ(MergeSort(test), test);
+
+
+}
+//////////////////////////////////////////////////////
+/*
+* Quick sort tests
+*/
+TEST(QuickSortTest1, SortingBasicList){
+    std::vector<int> test = { 9,8,7,6,5,4,3,2,1,0 };
+    int sorted[] = { 0,1,2,3,4,5,6,7,8,9 };
+
+    for (int i = 0; i < test.size(); i++)
+    {
+        EXPECT_EQ(QuickSort(test).at(i), sorted[i]);
+    }
+
+}
+
+TEST(QuickSortTest2, SortingBasicListWithNegatives){
+    std::vector<int> test = { 9,-8,7,6,-5,4,-3,2,-1,0 };
+    int sorted[] = { -8,-5,-3,-1,0,2,4,6,7,9 };
+
+    for (int i = 0; i < test.size(); i++)
+    {
+        EXPECT_EQ(QuickSort(test).at(i), sorted[i]);
+    }
+
+}
+
+TEST(QuickSortTest3, SortingBasicListWithMultiDigitNums){
+    std::vector<int> test = { 90,8,700,6,5,40,3,26,12,0 };
+    int sorted[] = { 0,3,5,6,8,12,26,40,90,700 };
+
+    for (int i = 0; i < test.size(); i++)
+    {
+        EXPECT_EQ(QuickSort(test).at(i), sorted[i]);
+    }
+
+}
+
+TEST(QuickSortTest4, AlreadySortedList){
+    std::vector<int> test = { 1,2,3,4,5 };
+    int sorted[] = { 1,2,3,4,5 };
+
+    for (int i = 0; i < test.size(); i++)
+    {
+        EXPECT_EQ(QuickSort(test).at(i), sorted[i]);
+    }
+
+}
+
+TEST(QuickSortTest5, OneNumberLongList){
+    std::vector<int> test = { 0 };
+    int sorted[] = { 0 };
+
+    for (int i = 0; i < test.size(); i++)
+    {
+        EXPECT_EQ(QuickSort(test).at(i), sorted[i]);
+    }
+
+}
+
+TEST(QuickSortTest6, EmptyList){
+    std::vector<int> test = {};
+
+    EXPECT_EQ(QuickSort(test), test);
+
+
+}
+//////////////////////////////////////////////////////
+/*
+* Selection sort tests
+*/
+TEST(SelectionSortTest1, SortingBasicList){
+    std::vector<int> vec = { 9,8,7,6,5,4,3,2,1,0 };
+    int sorted[] = { 0,1,2,3,4,5,6,7,8,9 };
+
+    std::vector<int> test = SelectionSort(vec);
+    for (int i = 0; i < test.size(); i++)
+    {
+        EXPECT_EQ(test.at(i), sorted[i]);
+    }
+
+}
+TEST(SelectionSortTest2, SortingBasicListWithNegatives){
+    std::vector<int> test = { 9,-8,7,6,-5,4,-3,2,-1,0 };
+    int sorted[] = { -8,-5,-3,-1,0,2,4,6,7,9 };
+
+    for (int i = 0; i < test.size(); i++)
+    {
+        EXPECT_EQ(SelectionSort(test).at(i), sorted[i]);
+    }
+
+}
+
+TEST(SelectionSortTest3, SortingBasicListWithMultiDigitNums){
+    std::vector<int> test = { 90,8,700,6,5,40,3,26,12,0 };
+    int sorted[] = { 0,3,5,6,8,12,26,40,90,700 };
+
+    for (int i = 0; i < test.size(); i++)
+    {
+        EXPECT_EQ(SelectionSort(test).at(i), sorted[i]);
+    }
+
+}
+
+TEST(SelectionSortTest4, AlreadySortedList){
+    std::vector<int> test = { 1,2,3,4,5 };
+    int sorted[] = { 1,2,3,4,5 };
+
+    for (int i = 0; i < test.size(); i++)
+    {
+        EXPECT_EQ(SelectionSort(test).at(i), sorted[i]);
+    }
+
+}
+
+TEST(SelectionSortTest5, OneNumberLongList){
+    std::vector<int> test = { 0 };
+    int sorted[] = { 0 };
+
+    for (int i = 0; i < test.size(); i++)
+    {
+        EXPECT_EQ(SelectionSort(test).at(i), sorted[i]);
+    }
+
+}
+
+TEST(SelectionSortTest6, EmptyList){
+    std::vector<int> test = {};
+
+    EXPECT_EQ(SelectionSort(test), test);
+
+
+}

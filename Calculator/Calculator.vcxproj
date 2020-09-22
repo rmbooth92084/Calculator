@@ -144,14 +144,19 @@
   <ItemGroup>
     <ClInclude Include="abs.h" />
     <ClInclude Include="add.h" />
+    <ClInclude Include="bubbleSort.h" />
     <ClInclude Include="cos.h" />
     <ClInclude Include="decorator.h" />
     <ClInclude Include="div.h" />
     <ClInclude Include="e.h" />
     <ClInclude Include="factorial.h" />
+    <ClInclude Include="mergeSort.h" />
     <ClInclude Include="mod.h" />
     <ClInclude Include="paren.h" />
+    <ClInclude Include="quickSort.h" />
+    <ClInclude Include="selectionSort.h" />
     <ClInclude Include="sin.h" />
+    <ClInclude Include="sorting.h" />
     <ClInclude Include="tan.h" />
     <ClInclude Include="trunc.h" />
     <ClInclude Include="twoPow.h" />
