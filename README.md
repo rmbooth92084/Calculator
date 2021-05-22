@@ -1,7 +1,7 @@
 # Calculator
 
 # Goal
-The main point of this project is to learn how to use Visual Studios in general as well as how to use it with Github. This is also a practice on my knowledge of the composite, strategy, and factory design patterns.
+The main point of this project is to learn how to use Visual Studios in general as well as how to use it with Github. This is also a practice on my knowledge of the composite, strategy, and factory design patterns. I took some of the code I used in class projects and then created more to finish off this calculator.
 
 # Patterns
 - Composite Pattern - I plan to implement this pattern with how I do the basic operations of a scietific calculator.
